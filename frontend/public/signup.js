@@ -16,9 +16,6 @@ const signup = {
 signup.submit.addEventListener('click', e => {
   e.preventDefault();
 
-  console.log(e);
-
-
   signup.error.innerHTML = '';
 
   // Call API
