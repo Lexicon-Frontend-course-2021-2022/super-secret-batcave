@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background-color: #fff;
+    display: grid;
+
+    grid-template-rows: 50px auto 20px;
+
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: #F9BA26;
+}
+
+div.login,
+div.logout {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+div.username {
+    font-size: 14px;
+    font-weight: normal;
+
+}
+
+div.username::before {
+    content: "Logged in as ";
+
+}
+
+img.logo {
+    height: 80%;
+    margin: 0 0 0 0;
+}
+
+div.title {
+    margin: 0 auto 0 auto;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main {
+    background-color: #ccc;
+}
+
+footer {
+    background-color: black;
+    color: #F9BA26;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+/* ============================================================================
+ * popup forms
+ * ========================================================================= */
+.popup-form {
+    padding: 10px;
+    border-radius: 10px;
+    width: 250px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px black;
+}
+
+.popup-form h1 {
+    background-color: black;
+    margin: -10px -10px 10px -10px; 
+    border-radius: 10px 10px 0 0;
+    color: #F9BA26;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden !important; 
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+input {
+    width: 100%;
+    border: none;
+    height: 30px;
+    box-shadow: 0 0 2px black;
+}
+
+button {
+    width: 100%;
+    border: none;
+    background-color: #F9BA26;
+    height: 30px;
+    font-size: 20px;
+    margin: 10px 0;
+    border-radius: 99px;
+}
+.link {
+    cursor: pointer;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.tiny-text {
+    font-size: 12px;
+    color: #888;
+}
+
+.clickable {
+    cursor: pointer;
+
+}
+
+div.error-message {
+    color: red;
+    font-size: 14px;
+    padding-top: 10px;
+}

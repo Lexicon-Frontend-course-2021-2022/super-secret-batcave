@@ -5,14 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure page</title>
+    <link rel="stylesheet" href="/style.css">
+    <title>The secret batcave</title>
 </head>
 
 <body>
-    <h1>Secure page 1</h1>
 
-    <!-- Try to use more than one secure page -->
-    <a href="page2.html">Page 2</a>
+    <header>
+        <img class="logo" src='/images/logo.png'>
+        <div class="title">The secret batcave</div>
+        <div class="login"></div>
+        <div class="logout">
+            <div class='clickable' id='logout'>Logout</div>
+            <div class="username"></div>
+        </div>
+    </header>
+
+    <main>
+        <h1>This is where we put out SUPER SECRET stuff!</h1>
+
+        <p>You can only see this IF you are logged in and have a valif jwt token.</p>
+        <p>Trying to access this SUPER SECRET information with no token, or invalid token, will redirect you to The
+            public batcave!</p>
+
+        <p>Logging out will, of course, also take you to the public batcave.</p>
+
+    </main>
+
+    <footer>
+        Copyright &copy; 2021 - Thomas Hellström
+    </footer>
+
+
+    <script src="/cookies.js"></script>
+
+    <!-- Login / signup / logout -->
+    <script src="/logout.js"></script>
+
+    <!-- Intelligence fopr header -->
+    <script src="/header.js"></script>
 </body>
 
 </html>

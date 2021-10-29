@@ -21,24 +21,15 @@ module.exports = (req, res, next) => {
 
   const token = cookies['auth-token'];
 
+  // If no token OR wrong token, redirect to app root!
   if (!token) {
-    return res.redirect('/no-access.html');
-    // return res
-    //   .status(401)
-    //   .json('Access Denied');
+    return res.redirect('/');
   }
 
   if (verify(token)) {
     next();
   } else {
-    return res
-      .status(401)
-      .json
-      (
-        {
-          status: 'Not authorized'
-        }
-      )
+    return res.redirect('/');
   }
 }
 

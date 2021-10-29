@@ -6,29 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Index</title>
+    <title>The secret batcave</title>
 </head>
 
 <body>
-    <h1>Public page</h1>
 
-    <h2>Register user</h2>
-    <form>
-        <input type='text' id='register-username' placeholder='Username'><br>
-        <input type='password' id='register-password' placeholder='Password'><br>
-        <input type='email' id='register-email' placeholder='E-mail address'><br>
-        <button type='submit' id='register-submit'>Register</button>
-    </form>
+    <header>
+        <img class="logo" src='images/logo.png'>
+        <div class="title">The public batcave</div>
+        <div class="login hidden">
+            <div class='clickable'>Login</div>
+            <div></div>
+        </div>
+        <div class="logout hidden">
+            <div class='clickable' id='logout'>Logout</div>
+            <div class="username"></div>
+        </div>
+    </header>
 
-    <h2>Login user</h2>
-    <form>
-        <input type='text' id='login-username' placeholder='Username'><br>
-        <input type='password' id='login-password' placeholder='Password'><br>
-        <button type='submit' id='login-submit'>Login</button>
-    </form>
+    <main>
+
+        <h1>This is where we put our not-so-secret stuff!</h1>
+
+        <p>Everyone can see this page. It does not matter if you are logged in or not.</p>
+        <p>Logging in (or creating new user) will take you to the SUPER SECRET stuff!
+
+            <!-- Login/signup form -->
+        <div id="popup" class='popup-form hidden'>
+            <form>
+                <h1 class='popup-login form-name'>Login</h1>
+                <h1 class='popup-signup form-name hidden'>Signup</h1>
+
+                <div class='tiny-text'>Username</div>
+                <input type='text' id='form-username' placeholder='Username'><br>
+
+                <div class='popup-signup tiny-text hidden'>E-mail address</div>
+                <input class='popup-signup hidden' type='email' id='form-email' placeholder='jogn.doe@exmaple.com'><br>
+
+                <div class='tiny-text'>Password</div>
+                <input type='password' id='form-password' placeholder='Password'><br>
+
+                <div id='form-error' class='error-message'></div>
+
+                <button class='popup-login' type='submit' id='login-submit'>Login</button>
+                <button class='popup-signup hidden' type='submit' id='signup-submit'>Signup</button>
+
+                <div class="popup-login smalltext">
+                    No account yet?
+                    <span class='link' id='switch-to-signup'>Register</span>
+                    an account for free!
+                </div>
+                <div class="popup-signup smalltext hidden">
+                    Already have an account?
+                    <span class='link' id='switch-to-login'>Login</span>
+                    to your account
+                    instead!
+                </div>
+            </form>
+        </div>
+
+
+    </main>
+
+    <footer>
+        Copyright &copy; 2021 - Thomas Hellström
+    </footer>
+
 
     <script src="cookies.js"></script>
-    <script src="app.js"></script>
+
+    <!-- Login / signup / logout -->
+    <script src="login.js"></script>
+    <script src="signup.js"></script>
+    <script src="logout.js"></script>
+
+    <!-- Intelligence fopr header -->
+    <script src="header.js"></script>
 </body>
 
 </html>
